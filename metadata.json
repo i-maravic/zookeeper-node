@@ -1,0 +1,15 @@
+{
+  "name": "imaravic-zookeeper_node",
+  "version": "0.1.0",
+  "author": "Igor Maravić",
+  "summary": "Puppet provider to manage nodes on Zookeeper server.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/i-maravic/zookeeper-node",
+  "project_page": "https://github.com/i-maravic/zookeeper-node",
+  "issues_url": "https://github.com/i-maravic/zookeeper-node/issues",
+  "tags": ["zookeeper"],
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
