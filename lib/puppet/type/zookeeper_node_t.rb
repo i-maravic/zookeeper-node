@@ -1,4 +1,4 @@
-Puppet::Type.newtype(:zookeeper_node) do
+Puppet::Type.newtype(:zookeeper_node_t) do
   desc 'Manage nodes on zookeeper server.'
 
   ensurable
@@ -32,7 +32,7 @@ Puppet::Type.newtype(:zookeeper_node) do
     end
   end
 
-  autorequire(:zookeeper_node) do
+  autorequire(:zookeeper_node_t) do
     names = @parameters[:path].value.split('/')
     names.slice(1..-2).inject([]) { |a,v| a << "#{a.last}/#{v}" }.collect { |fs| names[0] + fs }
   end

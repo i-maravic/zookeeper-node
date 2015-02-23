@@ -5,7 +5,7 @@ RSpec.configure do |config|
   config.mock_with :mocha
 end
 
-provider_class = Puppet::Type.type(:zookeeper_node).provider(:zookeeper_node)
+provider_class = Puppet::Type.type(:zookeeper_node_t).provider(:zookeeper_node_t)
 describe provider_class do
 
   before :each do
@@ -14,7 +14,7 @@ describe provider_class do
     @server = 'localhost'
     @port = '2181'
 
-    @resource = Puppet::Type::Zookeeper_node.new(
+    @resource = Puppet::Type::Zookeeper_node_t.new(
       {
         :server => @server,
         :port   => @port,

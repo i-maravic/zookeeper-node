@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Puppet::Type.type(:zookeeper_node) do
+describe Puppet::Type.type(:zookeeper_node_t) do
   before do
     provider_class = stub 'provider class', :name => 'fake', :suitable? => true, :supports_parameter? => true
     provider_class.stubs(:new)

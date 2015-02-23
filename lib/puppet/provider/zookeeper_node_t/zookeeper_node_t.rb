@@ -1,5 +1,8 @@
-Puppet::Type.type(:zookeeper_node).provide(:zookeeper_node) do
-  require 'zookeeper'
+
+require 'zookeeper' if Puppet.features.zookeeper?
+
+Puppet::Type.type(:zookeeper_node_t).provide(:zookeeper_node_t) do
+  confine :feature => :zookeeper
 
   def zookeeper_err_code_to_str(code)
     case code
